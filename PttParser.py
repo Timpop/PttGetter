@@ -103,11 +103,11 @@ class PttParser(object):
         #        'url' :url
         #        'context': context
         #        }
-        artData = self._parseArticleData()
+        artData = self._parseArticleData() #呼叫自建函數
         
         year = artData['art_post_time'][0:4]
-        pushtxs = self._parsePushTexts(year)
+        pushtxs = self._parsePushTexts(year)  #呼叫自建函數
         
-        return PttData(artData['art_author'],artData['art_title'],
+        return PttData(artData['art_author'],artData['art_title'],  #Pttdata包是PttDataObject.py裡面的PttData class
                        artData['art_post_time'],artData['url'] ,artData['context'],pushtxs)
         pass
